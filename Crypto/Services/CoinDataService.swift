@@ -4,6 +4,18 @@
 //
 //  Created by Kareem on 22/08/2026.
 //
+// old sink
+/*            .sink { completion in
+//                switch completion {
+//                case .finished:
+//                    break
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                }
+//            } receiveValue: { [weak self] returnedCoins in
+//                self?.allCoins = returnedCoins
+//                self?.coinSubscription?.cancel()
+           } */
 
 import Foundation
 import Combine
@@ -26,18 +38,6 @@ class CoinDataService {
                                 self?.allCoins = returnedCoins
                                 self?.coinSubscription?.cancel()
                             })
-
-//            .sink { completion in
-//                switch completion {
-//                case .finished:
-//                    break
-//                case .failure(let error):
-//                    print(error.localizedDescription)
-//                }
-//            } receiveValue: { [weak self] returnedCoins in
-//                self?.allCoins = returnedCoins
-//                self?.coinSubscription?.cancel()
-//            }
-        
+   
     }
 }
