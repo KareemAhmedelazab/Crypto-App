@@ -72,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				144E907630359F08008051D5 /* CryptoApp.swift */,
+				14AD23243039C90B004E7108 /* Utilities */,
 				144E90863035A1D2008051D5 /* Extensions */,
 				14BA928830397EEF00506A06 /* Services */,
 				14BA92793036AB7700506A06 /* Models */,
@@ -151,6 +152,13 @@
 				144E90933035EFDC008051D5 /* CircleButtonAnimationView.swift */,
 			);
 			path = CircleButton;
+			sourceTree = "<group>";
+		};
+		14AD23243039C90B004E7108 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		14BA92793036AB7700506A06 /* Models */ = {
