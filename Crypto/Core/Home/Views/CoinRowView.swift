@@ -25,7 +25,7 @@ struct CoinRowView: View {
     }
 }
 
-#Preview(traits: .sizeThatFitsLayout) {
+#Preview {
     CoinRowView(coin: DeveloperPreview.instance.coin, showHoldingsColumn: true)
 }
 
