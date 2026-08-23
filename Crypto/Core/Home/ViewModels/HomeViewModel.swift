@@ -8,11 +8,11 @@
 import Foundation
 import Combine
 
-@Observable
-class HomeViewModel {
+
+class HomeViewModel: ObservableObject {
     
-     var allCoins: [CoinModel] = []
-     var protfolioCoins: [CoinModel] = []
+    @Published var allCoins: [CoinModel] = []
+    @Published var protfolioCoins: [CoinModel] = []
     
     private let dataService = CoinDataService()
     private var cancellables = Set<AnyCancellable>()
