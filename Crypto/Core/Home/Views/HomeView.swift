@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @Environment(HomeViewModel.self) var vm
+    @EnvironmentObject var vm: HomeViewModel
     @State private var showProtfolio: Bool = false
     
     var body: some View {
@@ -42,7 +42,7 @@ struct HomeView: View {
     NavigationStack {
         HomeView()
     }
-    .environment(DeveloperPreview.instance.homeVM)
+    .environmentObject(DeveloperPreview.instance.homeVM)
 }
 
 extension HomeView {
