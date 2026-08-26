@@ -76,4 +76,35 @@ struct MarketDataModel: Codable {
         case volumeChangePercentage24HUsd = "volume_change_percentage_24h_usd"
         case updatedAt = "updated_at"
     }
+    
+    var marketCap: String {
+        if let item = totalMarketCap.first(where: { (key, value) -> Bool in
+            return key == "usd"
+        }) {
+            return "$" + item.value.formattedWithAbbreviations()
+        } else {
+            return ""
+        }
+    }
+    
+    var volume: String {
+        if let item = totalVolume.first(where: { (key, value) -> Bool in
+            return key == "usd"
+        }) {
+            return "$" + item.value.formattedWithAbbreviations()
+        } else {
+            return ""
+        }
+    }
+    
+    var btcDominance: String {
+        if let item = marketCapPercentage.first(where: { (key, value) -> Bool in
+            return key == "btc"
+        }) {
+            return item.value.asPercentString()
+        } else {
+            return ""
+        }
+
+    }
 }
