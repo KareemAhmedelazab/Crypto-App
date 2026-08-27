@@ -11,12 +11,17 @@ struct HomeView: View {
     
     @EnvironmentObject var vm: HomeViewModel
     @State private var showProtfolio: Bool = false
+    @State var protfolioSheet: Bool = false
     
     var body: some View {
         ZStack {
             // background layer
             Color.theme.background
                 .ignoresSafeArea()
+                .sheet(isPresented: $protfolioSheet, content: {
+                    PortfolioView()
+                        .environmentObject(vm)
+                })
             
             // content layer
             VStack {
@@ -56,6 +61,11 @@ extension HomeView {
                 .background {
                     CircleButtonAnimationView(animate: $showProtfolio)
                 }
+                .onTapGesture {
+                    if showProtfolio {
+                        protfolioSheet.toggle()
+                    }
+                }
             Spacer()
             Text(showProtfolio ? "ProtFolio" : "Live Prices")
                 .font(.headline)
@@ -87,7 +97,7 @@ extension HomeView {
     
     private var protfolioCoinsList: some View {
         List {
-            ForEach(vm.protfolioCoins) { coin in
+            ForEach(vm.portfolioCoins) { coin in
                 CoinRowView(coin: coin, showHoldingsColumn: true)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 8))
             }
@@ -106,6 +116,14 @@ extension HomeView {
                 .containerRelativeFrame(.horizontal, alignment: .trailing) { x, _ in
                     x / 3
                 }
+            Button(action: {
+                withAnimation(.linear(duration: 2)) {
+                    vm.reloadData()
+                }
+            }, label: {
+                Image(systemName: "goforward")
+            })
+            .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
         }
         .font(.caption)
         .foregroundStyle(Color.theme.secondaryText)
