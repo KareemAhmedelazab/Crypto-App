@@ -36,6 +36,11 @@ struct PortfolioView: View {
                     saveBarTrailing
                 }
             }
+            .onChange(of: vm.searchText) { oldValue, newValue in
+                if newValue == "" {
+                    removeSelectedCoin()
+                }
+            }
         }
     }
 }
