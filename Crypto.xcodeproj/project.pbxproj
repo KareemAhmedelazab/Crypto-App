@@ -35,6 +35,7 @@
 		14C66750303F1466008F62F9 /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C6674F303F1466008F62F9 /* MarketDataService.swift */; };
 		14C6675230401CD7008F62F9 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C6675130401CD7008F62F9 /* PortfolioView.swift */; };
 		14C66754304023D3008F62F9 /* XmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C66753304023D3008F62F9 /* XmarkButton.swift */; };
+		14C66756304026C1008F62F9 /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C66755304026C1008F62F9 /* CoinLogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		14C6674F303F1466008F62F9 /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
 		14C6675130401CD7008F62F9 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		14C66753304023D3008F62F9 /* XmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmarkButton.swift; sourceTree = "<group>"; };
+		14C66755304026C1008F62F9 /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				14007D67303A1D5E005261FD /* CoinImageView.swift */,
 				14007D6B303A2334005261FD /* CoinImageViewModel.swift */,
+				14C66755304026C1008F62F9 /* CoinLogoView.swift */,
 			);
 			path = CoinImage;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				14A4C046303C73B6000AC1B5 /* SearchBarView.swift in Sources */,
 				144E90943035EFDC008051D5 /* CircleButtonAnimationView.swift in Sources */,
 				14A4C04E303C9F3B000AC1B5 /* HomeStatsView.swift in Sources */,
+				14C66756304026C1008F62F9 /* CoinLogoView.swift in Sources */,
 				14C66754304023D3008F62F9 /* XmarkButton.swift in Sources */,
 				14C66750303F1466008F62F9 /* MarketDataService.swift in Sources */,
 				14007D6C303A2334005261FD /* CoinImageViewModel.swift in Sources */,
