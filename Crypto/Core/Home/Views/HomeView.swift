@@ -116,6 +116,14 @@ extension HomeView {
                 .containerRelativeFrame(.horizontal, alignment: .trailing) { x, _ in
                     x / 3
                 }
+            Button(action: {
+                withAnimation(.linear(duration: 2)) {
+                    vm.reloadData()
+                }
+            }, label: {
+                Image(systemName: "goforward")
+            })
+            .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
         }
         .font(.caption)
         .foregroundStyle(Color.theme.secondaryText)

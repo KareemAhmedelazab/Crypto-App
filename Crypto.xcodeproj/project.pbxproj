@@ -17,6 +17,7 @@
 		144E908E3035E78A008051D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E908D3035E78A008051D5 /* HomeView.swift */; };
 		144E90923035EA20008051D5 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E90913035EA20008051D5 /* CircleButtonView.swift */; };
 		144E90943035EFDC008051D5 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144E90933035EFDC008051D5 /* CircleButtonAnimationView.swift */; };
+		146CE0213040A87D00EBD2D2 /* HapticManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146CE0203040A87D00EBD2D2 /* HapticManger.swift */; };
 		14A4C042303C13EB000AC1B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14A4C041303C13EB000AC1B5 /* Assets.xcassets */; };
 		14A4C044303C15A9000AC1B5 /* LocalFileManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A4C043303C15A9000AC1B5 /* LocalFileManger.swift */; };
 		14A4C046303C73B6000AC1B5 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A4C045303C73B5000AC1B5 /* SearchBarView.swift */; };
@@ -52,6 +53,7 @@
 		144E908D3035E78A008051D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		144E90913035EA20008051D5 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		144E90933035EFDC008051D5 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
+		146CE0203040A87D00EBD2D2 /* HapticManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManger.swift; sourceTree = "<group>"; };
 		14A4C041303C13EB000AC1B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14A4C043303C15A9000AC1B5 /* LocalFileManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManger.swift; sourceTree = "<group>"; };
 		14A4C045303C73B5000AC1B5 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			children = (
 				14AD23253039CA46004E7108 /* NetworkingManger.swift */,
 				14A4C043303C15A9000AC1B5 /* LocalFileManger.swift */,
+				146CE0203040A87D00EBD2D2 /* HapticManger.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				14BA927D303806CE00506A06 /* CoinRowView.swift in Sources */,
 				14BA92873038860600506A06 /* HomeViewModel.swift in Sources */,
 				144E907930359F08008051D5 /* ContentView.swift in Sources */,
+				146CE0213040A87D00EBD2D2 /* HapticManger.swift in Sources */,
 				14AD23263039CA46004E7108 /* NetworkingManger.swift in Sources */,
 				14C6674E303F0C9A008F62F9 /* MarketDataModel.swift in Sources */,
 				14007D68303A1D5E005261FD /* CoinImageView.swift in Sources */,
