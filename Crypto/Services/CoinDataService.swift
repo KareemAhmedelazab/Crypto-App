@@ -1,0 +1,43 @@
+//
+//  CoinDataService.swift
+//  Crypto
+//
+//  Created by Kareem on 22/08/2026.
+//
+// old sink
+/*            .sink { completion in
+//                switch completion {
+//                case .finished:
+//                    break
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                }
+//            } receiveValue: { [weak self] returnedCoins in
+//                self?.allCoins = returnedCoins
+//                self?.coinSubscription?.cancel()
+           } */
+
+import Foundation
+import Combine
+
+class CoinDataService {
+    
+    @Published var allCoins: [CoinModel] = []
+    var coinSubscription: AnyCancellable?
+    
+    init() {
+        getCoins()
+    }
+    
+     func getCoins() {
+        guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=true&price_change_percentage=24h") else { return }
+        
+        coinSubscription = NetworkingManger.download(url: url)
+            .decode(type: [CoinModel].self, decoder: JSONDecoder())
+            .sink(receiveCompletion: NetworkingManger.handleCompletion(completion:), receiveValue: { [weak self] returnedCoins in
+                                self?.allCoins = returnedCoins
+                                self?.coinSubscription?.cancel()
+                            })
+   
+    }
+}
