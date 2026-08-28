@@ -17,7 +17,8 @@ extension Double {
         formatter.usesGroupingSeparator = true
         formatter.numberStyle = .currency
 //        formatter.locale = .current
-        formatter.currencyCode = "USD"
+        formatter.locale = Locale(identifier: "en_US")
+        formatter.currencySymbol = "$"
         formatter.minimumFractionDigits = 2
         formatter.maximumFractionDigits = 2
         return formatter
