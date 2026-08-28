@@ -107,15 +107,47 @@ extension HomeView {
     
     private var columnTitles: some View {
         HStack {
-            Text("Coin")
+            HStack(spacing: 4.0) {
+                Text("Coin")
+                Image(systemName: "chevron.down")
+                    .opacity(vm.sortOption == .rank || vm.sortOption == .rankReversed ? 1 : 0)
+                    .rotationEffect(Angle(degrees: vm.sortOption == .rank ? 0 : 180), anchor: .center)
+                
+                    
+            }
+            .onTapGesture {
+                withAnimation {
+                    vm.sortOption = vm.sortOption == .rank ? .rankReversed : .rank
+                }
+            }
             Spacer()
             if showProtfolio {
-                Text("Holdings")
-            }
-            Text("Price")
-                .containerRelativeFrame(.horizontal, alignment: .trailing) { x, _ in
-                    x / 3
+                HStack(spacing: 4.0) {
+                    Text("Holdings")
+                    Image(systemName: "chevron.down")
+                        .opacity(vm.sortOption == .holdings || vm.sortOption == .holdingsReversed ? 1 : 0)
+                        .rotationEffect(Angle(degrees: vm.sortOption == .holdings ? 0 : 180), anchor: .center)
                 }
+                .onTapGesture {
+                    withAnimation {
+                        vm.sortOption = vm.sortOption == .holdings ? .holdingsReversed : .holdings
+                    }
+                }
+            }
+            HStack(spacing: 4.0) {
+                Text("Price")
+                Image(systemName: "chevron.down")
+                    .opacity(vm.sortOption == .price || vm.sortOption == .priceReversed ? 1 : 0)
+                    .rotationEffect(Angle(degrees: vm.sortOption == .price ? 0 : 180), anchor: .center)
+            }
+            .containerRelativeFrame(.horizontal, alignment: .trailing) { x, _ in
+                x / 3
+        }
+            .onTapGesture {
+                withAnimation {
+                    vm.sortOption = vm.sortOption == .price ? .priceReversed : .price
+                }
+            }
             Button(action: {
                 withAnimation(.linear(duration: 2)) {
                     vm.reloadData()
