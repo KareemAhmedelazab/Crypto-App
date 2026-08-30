@@ -12,6 +12,10 @@ struct HomeView: View {
     @EnvironmentObject var vm: HomeViewModel
     @State private var showProtfolio: Bool = false
     @State var protfolioSheet: Bool = false
+    @State var showSettingsView: Bool = false
+    @State private var selectCoin: CoinModel? = nil
+    @State private var showDeatailView: Bool = false
+    
     
     var body: some View {
         ZStack {
@@ -41,6 +45,16 @@ struct HomeView: View {
                 }
                 Spacer(minLength: 0)
             }
+            .sheet(isPresented: $showSettingsView, content: {
+                SettingsVeiw()
+            })
+        }
+        .navigationDestination(isPresented: $showDeatailView) {
+            DetailLoadingView(coin: $selectCoin)
+            
+            //            NavigationLink(destination: DetailLoadingView(coin: $selectCoin), isActive: $showDeatailView) {
+            //                EmptyView()
+            //            }
         }
     }
 }
@@ -64,6 +78,8 @@ extension HomeView {
                 .onTapGesture {
                     if showProtfolio {
                         protfolioSheet.toggle()
+                    } else {
+                        showSettingsView.toggle()
                     }
                 }
             Spacer()
@@ -90,6 +106,9 @@ extension HomeView {
             ForEach(vm.allCoins) { coin in
                 CoinRowView(coin: coin, showHoldingsColumn: false)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 8))
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
             }
         }
         .listStyle(.plain)
@@ -100,9 +119,17 @@ extension HomeView {
             ForEach(vm.portfolioCoins) { coin in
                 CoinRowView(coin: coin, showHoldingsColumn: true)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 8))
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
             }
         }
         .listStyle(.plain)
+    }
+    
+    private func segue(coin: CoinModel) {
+        selectCoin = coin
+        showDeatailView.toggle()
     }
     
     private var columnTitles: some View {
@@ -113,7 +140,7 @@ extension HomeView {
                     .opacity(vm.sortOption == .rank || vm.sortOption == .rankReversed ? 1 : 0)
                     .rotationEffect(Angle(degrees: vm.sortOption == .rank ? 0 : 180), anchor: .center)
                 
-                    
+                
             }
             .onTapGesture {
                 withAnimation {
@@ -142,7 +169,7 @@ extension HomeView {
             }
             .containerRelativeFrame(.horizontal, alignment: .trailing) { x, _ in
                 x / 3
-        }
+            }
             .onTapGesture {
                 withAnimation {
                     vm.sortOption = vm.sortOption == .price ? .priceReversed : .price
