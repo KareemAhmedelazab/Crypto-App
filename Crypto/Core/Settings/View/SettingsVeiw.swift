@@ -1,0 +1,18 @@
+//
+//  SettingsVeiw.swift
+//  Crypto
+//
+//  Created by Kareem on 30/08/2026.
+//
+
+import SwiftUI
+
+struct SettingsVeiw: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+}
+
+#Preview {
+    SettingsVeiw()
+}
