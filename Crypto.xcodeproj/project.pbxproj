@@ -34,6 +34,7 @@
 		14A4C04E303C9F3B000AC1B5 /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A4C04D303C9F3B000AC1B5 /* HomeStatsView.swift */; };
 		14AD23263039CA46004E7108 /* NetworkingManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD23253039CA46004E7108 /* NetworkingManger.swift */; };
 		14B850C73045B0D500FC9A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B850C63045B0D500FC9A19 /* LaunchScreen.storyboard */; };
+		14B850C93045B2ED00FC9A19 /* launchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B850C83045B2ED00FC9A19 /* launchView.swift */; };
 		14BA927B3036AB9000506A06 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA927A3036AB9000506A06 /* CoinModel.swift */; };
 		14BA927D303806CE00506A06 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA927C303806CE00506A06 /* CoinRowView.swift */; };
 		14BA928330380E2500506A06 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA928230380E2500506A06 /* PreviewProvider.swift */; };
@@ -78,6 +79,7 @@
 		14A4C04D303C9F3B000AC1B5 /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
 		14AD23253039CA46004E7108 /* NetworkingManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManger.swift; sourceTree = "<group>"; };
 		14B850C63045B0D500FC9A19 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14B850C83045B2ED00FC9A19 /* launchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launchView.swift; sourceTree = "<group>"; };
 		14BA927A3036AB9000506A06 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		14BA927C303806CE00506A06 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		14BA928230380E2500506A06 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				14B850C63045B0D500FC9A19 /* LaunchScreen.storyboard */,
+				14B850C83045B2ED00FC9A19 /* launchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				144E90943035EFDC008051D5 /* CircleButtonAnimationView.swift in Sources */,
 				14A4C04E303C9F3B000AC1B5 /* HomeStatsView.swift in Sources */,
 				14C66756304026C1008F62F9 /* CoinLogoView.swift in Sources */,
+				14B850C93045B2ED00FC9A19 /* launchView.swift in Sources */,
 				14C66754304023D3008F62F9 /* XmarkButton.swift in Sources */,
 				14C66750303F1466008F62F9 /* MarketDataService.swift in Sources */,
 				14007D6C303A2334005261FD /* CoinImageViewModel.swift in Sources */,
@@ -567,6 +571,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -597,6 +602,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
